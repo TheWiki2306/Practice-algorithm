@@ -53,3 +53,4 @@ function linearSearchAnalysis() {
 }
 
 linearSearchAnalysis();
+// Note: For linear search, the time grows as the input grows making it O(n) - worst case;
