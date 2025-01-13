@@ -1,14 +1,23 @@
-// Function to get a a searched key in a queue
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// const index = linearSearch(arr, 10)
+// const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// if (index != -1) {
-//     console.log(`Found: ${index}`);
-    
-// } else {
-//     console.log('not found');
-    
-// }
+//         function linearSearch(list, target) {
+            
+//             for (let i = 0; i < list.length; i++) {
+                    
+//                 if (list[i] === target) {
+//                     return i;
+                    
+//                 } 
+//             }
+
+//             return console.log('target not found');
+            
+            
+//         }
+
+//         const target = 8;
+//         let result = linearSearch(list, target)
+//         console.log(result);
 
 function linearSearch(arr, targetWorstCase) {
     for (let i = 0; i < arr.length; i++) {

@@ -13,7 +13,6 @@ function quickSort(array, lowerBound, higherBound) {
     }
     
     return array;
-
 }
 
 function partition(array, lowerBound, higherBound) {
