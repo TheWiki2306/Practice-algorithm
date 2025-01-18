@@ -9,7 +9,7 @@ function mergeSort(arrayList) {
     const leftList = mergeSort(arrayList.slice(0, midPoint));
     const rightList = mergeSort(arrayList.slice(midPoint));
 
-    return mergeSort(leftList, rightList);
+    return merge(leftList, rightList);
 }
 
 function merge(leftList, rightList) {
@@ -29,7 +29,8 @@ function merge(leftList, rightList) {
         }
     }
 
-    return mergedList.concat(leftList.slice(leftIndex)).concat(rightList.slice(rightIndex));
+    return mergedList.concat(leftList.slice(leftIndex)).concat(rightList.slice(rightIndex))
+    
 }
 
 
