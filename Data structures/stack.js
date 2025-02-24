@@ -1,16 +1,19 @@
-let size = 5;
-let stack = new Array(size);
-let top = -1;
-
-function push() {
-  let x;
-  x = parseInt(prompt("Enter data: "));
-  if (top === size - 1) {
-    console.log("Overflow...");
-  } else {
-    top++;
-    stack[top] = x;
+class stack {
+  constructor(size) {
+    this.top = -1;
+    this.size = 5;
+    this.stack = new Array(size);
   }
 
-  console.log(stack);
+  push() {
+    if (this.top === this.size - 1) {
+      console.log("Overflow: stack is full");
+      return;
+    }
+
+    let x = parseInt(prompt("Enter data: "));
+    if (isNaN(x)) {
+      console.log("Enter a number");
+    }
+  }
 }
