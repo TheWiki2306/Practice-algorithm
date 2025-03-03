@@ -15,5 +15,31 @@ class stack {
     if (isNaN(x)) {
       console.log("Enter a number");
     }
+
+    this.top++;
+    this.stack[this.top] = x;
+    console.log("New stack", this.stack);
+  }
+
+  pop() {
+    if (this.top === -1) {
+      console.log("Underflow: stack is empty");
+      return;
+    }
+
+    const poppedValue = this.stack[this.top];
+    console.log("Popped Value" + poppedValue);
+    console.log("New stack" + this.stack);
+    return poppedValue;
+  }
+
+  peek() {
+    if (this.top === -1) {
+      console.log("This stack is empty");
+      return;
+    } else {
+      console.log("Top element" + this.stack[this.top]);
+      return this.stack[this.top];
+    }
   }
 }
