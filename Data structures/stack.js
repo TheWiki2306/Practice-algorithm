@@ -1,7 +1,7 @@
-class stack {
+class Stack {
   constructor(size) {
     this.top = -1;
-    this.size = 5;
+    this.size = size;
     this.stack = new Array(size);
   }
 
@@ -28,8 +28,11 @@ class stack {
     }
 
     const poppedValue = this.stack[this.top];
-    console.log("Popped Value" + poppedValue);
-    console.log("New stack" + this.stack);
+
+    this.stack.length = this.top;
+    this.top--;
+    console.log("Popped Value " + poppedValue);
+    console.log("New stack " + this.stack);
     return poppedValue;
   }
 
@@ -38,8 +41,17 @@ class stack {
       console.log("This stack is empty");
       return;
     } else {
-      console.log("Top element" + this.stack[this.top]);
+      console.log("Top element: " + this.stack[this.top]);
       return this.stack[this.top];
     }
   }
 }
+
+const stack = new Stack(5);
+
+stack.push();
+stack.push();
+stack.push();
+stack.push();
+stack.peek();
+stack.pop();
