@@ -1,14 +1,15 @@
 class TreeNode {
   constructor(value) {
     this.value = value;
+    this.left = null;
+    this.right = null;
   }
 }
 
+// This is wrong for now
 class BinaryTree {
-  constructor() {
+  constructor(l) {
     this.root = null;
-    this.left = null;
-    this.right = null;
   }
 
   insert(value) {
@@ -39,7 +40,7 @@ class BinaryTree {
   }
 }
 
-const tree = new BinaryTree(left, right);
+const tree = new BinaryTree();
 
-tree.insert(5);
-tree.insert();
+tree.insert(5, null);
+tree.insert(null, 6);
